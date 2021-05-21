@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import { Button, Modal,Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { uuid } from 'uuidv4';
 const Add = ({addMovie}) => {
     const [show, setShow] = useState(false);
   
     const handleClose = () => {
+      setId(uuid())
         setTitle('')
         setImageUrl('')
         setDescription('')
@@ -14,7 +16,7 @@ const Add = ({addMovie}) => {
     };
     const handleShow = () => setShow(true);
     
-  
+const [id, setId] = useState(uuid())
   const [title, setTitle] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [description, setDescription] = useState('');
@@ -23,6 +25,7 @@ const Add = ({addMovie}) => {
   const handleSave =()=>{
 
       addMovie({
+        id,
         title,
         imageUrl,
         description,
