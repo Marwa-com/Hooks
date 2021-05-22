@@ -5,13 +5,13 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import StarRatingComponent from 'react-star-rating-component';
 const MovieCard = ({movie}) => (
-   <Card style={{ width: 280, height:520, backgroundColor:" burlywood" }}>
+   
+   <Card style={{ width: 280, height:520, backgroundColor:" burlywood"}}>
             <Card.Img style={{height: 270}} src={movie.imageUrl} alt=""  />
             <Card.Body>
             <Card.Title style={{color:"blue"}}>{movie.title} </Card.Title>
-            <Card.Text style={{fontSize:12}}>{movie.description}  <Button>Download </Button></Card.Text>
+           <Card.Text style={{fontSize:12, color:"black"}}>{movie.description} <Button>Download </Button></Card.Text>
             </Card.Body>
-
             <Card.Body>
             <Card.Link style={{fontSize:25}} >
             <StarRatingComponent 
@@ -23,7 +23,7 @@ const MovieCard = ({movie}) => (
                 
             </Card.Body>
             </Card>
-          
+            
 );
 
 MovieCard.defaultProps = {

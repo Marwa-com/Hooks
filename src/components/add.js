@@ -11,6 +11,7 @@ const Add = ({addMovie}) => {
         setTitle('')
         setImageUrl('')
         setDescription('')
+        setTrailer ('')
         setRating('')
         setShow(false)
     };
@@ -20,6 +21,7 @@ const [id, setId] = useState(uuid())
   const [title, setTitle] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [description, setDescription] = useState('');
+  const [trailer, setTrailer] = useState('');
   const [rating, setRating] = useState(0);
 
   const handleSave =()=>{
@@ -29,6 +31,7 @@ const [id, setId] = useState(uuid())
         title,
         imageUrl,
         description,
+        trailer,
         rating
       })
       handleClose()
@@ -50,6 +53,7 @@ const [id, setId] = useState(uuid())
           <Form.Control placeholder="Title" onChange={(title)=>setTitle(title.target.value)}/>
           <Form.Control placeholder="imageUrl" onChange={(e)=>setImageUrl(e.target.value)}/>
           <Form.Control as="textarea" rows={3} placeholder="description" onChange={(e)=>setDescription(e.target.value)}/>
+          <Form.Control placeholder="trailer" onChange={(e)=>setTrailer(e.target.value)}/>
           <Form.Control placeholder="rating" onChange={(e)=>setRating(e.target.value)}/>
           
           </Modal.Body>
