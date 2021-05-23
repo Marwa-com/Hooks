@@ -3,11 +3,12 @@
     display: flex; 
   flex-direction: column;
     min-height: 100vh;
-background:url(star.jpg);
-
+    background-color:rgb(36, 36, 46);
+   
 }
 .card-deck{
 display: flex;
+flex-wrap: wrap;
 justify-content: space-around;
 margin-top: 20px;
 
@@ -15,17 +16,31 @@ margin-top: 20px;
 
 .movie-list{
     display: flex;
+    
 }
-
+.mov-desc{
+  margin-top: 20px; 
+  width: 100%;
+  margin-bottom: 30px;
+}
 
 .sousapp{
     margin-top: 15px;
     display: flex; 
    align-items: center;
-    background-color:burlywood;
+    background-color:rgb(8, 8, 15);
     height: 60px;
-    margin-left: 40px;
-    margin-right: 40px;
+  
+    margin-top: 0px;
+}
+.head{
+ display:flex;
+ background-color: rgb(8, 8, 15);
+
+}
+.container{
+   display:flex;
+   margin-top: 20px;
 }
 
 

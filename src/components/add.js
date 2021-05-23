@@ -39,7 +39,7 @@ const [id, setId] = useState(uuid())
 
     return (
       <>
-          <Button style={{ width:150, height:40, backgroundColor:"rgb(27, 27, 236)" ,color:"white", marginLeft:200}} 
+          <Button style={{ width:150, height:40, backgroundColor:"red" ,color:"rgb(36, 36, 46)", fontWeight:"700" , marginLeft:200}} 
           variant="primary" onClick={handleShow}>
         New Movie
       </Button>

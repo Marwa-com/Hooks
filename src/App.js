@@ -25,7 +25,7 @@ const [movies, setMovies] = useState([
     id:uuid(),
     title: "Final Fantasy",
     trailer:"https://youtu.be/ofWtkPs92Nc",
-    description: "A scientist makes a last stand on Earth with the help of a ragtag team of soldiers against an invasion of alien phantoms.",
+    description: "A scientist makes a last stand on Earth with the help of a ragtag team of soldiers against an invasion of alien phantoms. ",
     imageUrl: 'https://m.media-amazon.com/images/M/MV5BYmMzMDE1YTctNTg2MC00Mjg4LWI5NWQtOGY4ZGIzMWFhZTM4XkEyXkFqcGdeQXVyNTY1NTA1ODc@._V1_UY268_CR13,0,182,268_AL_.jpg',
     rating: 5,
 },
@@ -60,12 +60,14 @@ const [movies, setMovies] = useState([
 
   return (
     <div className="app"> 
+     
         <div className="sousapp">
-          <h2 style={{ color:'rgb(27, 27, 236)', marginLeft:50, marginRight:100}}> watch your best movie here </h2>
+          <h2 style={{ color:'red', marginLeft:50, marginRight:100}}> watch your best movie here </h2>
           <Filter search={search} handleRating={handleRating} />
           <Add addMovie={addMovie}/>
         </div>
-        <BrowserRouter >
+       
+      <BrowserRouter > 
         <MovieList movies = {movies.filter( el=> el.title.toLowerCase().includes(keyword.toLowerCase().trim())&& el.rating>=rate) } />
       </BrowserRouter>
     
